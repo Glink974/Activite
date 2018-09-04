@@ -11,12 +11,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-
 public class ExpeditionController {
     @Autowired
     ExpeditionDAO expeditionDAO;
 
-    @PostMapping(value = "/commandes")
+    @PostMapping(value = "/expedition")
     public ResponseEntity<Expedition> ajouterCommande(@RequestBody Expedition expedition){
 
         Expedition nouvelleExpedition = expeditionDAO.save(expedition);
